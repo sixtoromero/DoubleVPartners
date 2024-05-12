@@ -2,9 +2,9 @@
 {
     public class AppSettings
     {
-        public string? OriginCors { get; set; }
-        public string? Secret { get; set; }
-        public string? IsSuer { get; set; }
-        public string? Audience { get; set; }
+        public string OriginCors { get; set; } = string.Empty;
+        public string Secret { get; set; } = string.Empty;
+        public string IsSuer { get; set; } = string.Empty;
+        public string Audience { get; set; } = string.Empty;
     }
 }

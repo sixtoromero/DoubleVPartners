@@ -5,6 +5,11 @@ using DoubleVPartners.Transversal.Common;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Options;
+using System.Security.Claims;
+using Microsoft.IdentityModel.Tokens;
+using System.IdentityModel.Tokens.Jwt;
+using System.Text;
+using DoubleVPartners.Application.DTO.Request;
 
 namespace DoubleVPartners.Services.WebAPIRest.Controllers
 {
@@ -15,12 +20,14 @@ namespace DoubleVPartners.Services.WebAPIRest.Controllers
         private readonly IUsuariosApplication _Application;
         private readonly AppSettings _appSettings;
         private readonly IWebHostEnvironment env;
-
-        public UsuariosController(IUsuariosApplication application, IOptions<AppSettings> appSettings, IWebHostEnvironment env)
+        private IConfiguration _config;
+        
+        public UsuariosController(IUsuariosApplication application, IOptions<AppSettings> appSettings, IWebHostEnvironment env, IConfiguration config)
         {
             _Application = application;
             _appSettings = appSettings.Value;
             this.env = env;
+            _config = config;
         }
 
         [HttpGet("GetAllAsync")]
@@ -163,16 +170,17 @@ namespace DoubleVPartners.Services.WebAPIRest.Controllers
             }
         }
 
-        [HttpGet("Autenticar")]
-        public async Task<IActionResult> Autenticar(string NombreUsuario, string Clave)
+        [HttpPost("Autenticar")]
+        public async Task<IActionResult> Autenticar(AuthDTO request)
         {
             Response<UsuarioDTO?> response = new Response<UsuarioDTO?>();
 
             try
             {
-                response = await _Application.Autenticar(NombreUsuario, Clave);
+                response = await _Application.Autenticar(request.NombreUsuario, request.Clave);
                 if (response.IsSuccess)
-                {
+                {                    
+                    response.Data.Token = General.BuildToken(response.Data, _appSettings);
                     return Ok(response);
                 }
                 else

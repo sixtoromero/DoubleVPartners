@@ -65,6 +65,18 @@ var key = Encoding.ASCII.GetBytes(appSettings.Secret);
 var IsSuer = appSettings.IsSuer;
 var Audience = appSettings.Audience;
 
+builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+        .AddJwtBearer(options =>
+        {
+            options.TokenValidationParameters = new TokenValidationParameters
+            {
+                ValidateIssuerSigningKey = true,
+                IssuerSigningKey = new SymmetricSecurityKey(key),
+                ValidateIssuer = false,
+                ValidateAudience = false
+            };
+        });
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -74,8 +86,8 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-app.UseAuthorization();
 app.UseAuthentication();
+app.UseAuthorization();
 app.UseCors("CorsPolicy");
 
 app.MapControllers();
