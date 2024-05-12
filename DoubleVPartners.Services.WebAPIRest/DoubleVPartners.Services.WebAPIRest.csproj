@@ -7,7 +7,27 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="12.0.1" />
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="6.0.29" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="6.0.29" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
+    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="7.5.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\DoubleVPartners.Application.DTO\DoubleVPartners.Application.DTO.csproj" />
+    <ProjectReference Include="..\DoubleVPartners.Application.Interface\DoubleVPartners.Application.Interface.csproj" />
+    <ProjectReference Include="..\DoubleVPartners.Application.Main\DoubleVPartners.Application.Main.csproj" />
+    <ProjectReference Include="..\DoubleVPartners.Domain.Core\DoubleVPartners.Domain.Core.csproj" />
+    <ProjectReference Include="..\DoubleVPartners.Domain.Entity\DoubleVPartners.Domain.Entity.csproj" />
+    <ProjectReference Include="..\DoubleVPartners.Domain.Interface\DoubleVPartners.Domain.Interface.csproj" />
+    <ProjectReference Include="..\DoubleVPartners.InfraStructure.Data\DoubleVPartners.InfraStructure.Data.csproj" />
+    <ProjectReference Include="..\DoubleVPartners.InfraStructure.Interface\DoubleVPartners.InfraStructure.Interface.csproj" />
+    <ProjectReference Include="..\DoubleVPartners.InfraStructure.Repository\DoubleVPartners.InfraStructure.Repository.csproj" />
+    <ProjectReference Include="..\DoubleVPartners.Transversal.Common\DoubleVPartners.Transversal.Common.csproj" />
+    <ProjectReference Include="..\DoubleVPartners.Transversal.Logging\DoubleVPartners.Transversal.Logging.csproj" />
+    <ProjectReference Include="..\DoubleVPartners.Transversal.Mapper\DoubleVPartners.Transversal.Mapper.csproj" />
   </ItemGroup>
 
 </Project>

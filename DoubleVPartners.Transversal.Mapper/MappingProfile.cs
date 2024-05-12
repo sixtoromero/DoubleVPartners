@@ -9,6 +9,7 @@ namespace DoubleVPartners.Transversal.Mapper
         public MappingProfile()
         {
             CreateMap<Persona, PersonaDTO>().ReverseMap();
+            CreateMap<Usuario, UsuarioDTO>().ReverseMap();
         }
     }
 }

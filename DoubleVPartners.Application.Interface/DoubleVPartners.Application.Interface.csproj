@@ -6,4 +6,9 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\DoubleVPartners.Application.DTO\DoubleVPartners.Application.DTO.csproj" />
+    <ProjectReference Include="..\DoubleVPartners.Transversal.Common\DoubleVPartners.Transversal.Common.csproj" />
+  </ItemGroup>
+
 </Project>

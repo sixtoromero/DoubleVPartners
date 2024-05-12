@@ -6,4 +6,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\DoubleVPartners.Domain.Entity\DoubleVPartners.Domain.Entity.csproj" />
+  </ItemGroup>
+
 </Project>
