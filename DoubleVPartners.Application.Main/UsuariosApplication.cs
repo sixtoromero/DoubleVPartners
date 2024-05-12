@@ -9,11 +9,11 @@ namespace DoubleVPartners.Application.Main
 {
     public class UsuariosApplication : IUsuariosApplication
     {
-        private readonly IPersonasDomain _Domain;
+        private readonly IUsuariosDomain _Domain;
         private readonly IMapper _mapper;
         private readonly IAppLogger<UsuariosApplication> _logger;
 
-        public UsuariosApplication(IPersonasDomain domain, IMapper mapper, IAppLogger<UsuariosApplication> logger)
+        public UsuariosApplication(IUsuariosDomain domain, IMapper mapper, IAppLogger<UsuariosApplication> logger)
         {
             _Domain = domain;
             _mapper = mapper;
@@ -25,7 +25,7 @@ namespace DoubleVPartners.Application.Main
             var response = new Response<bool>();
             try
             {
-                var resp = _mapper.Map<Persona>(modelDto);
+                var resp = _mapper.Map<Usuario>(modelDto);
                 response.Data = await _Domain.InsertAsync(resp);
                 if (response.Data)
                 {
@@ -50,7 +50,7 @@ namespace DoubleVPartners.Application.Main
             var response = new Response<bool>();
             try
             {
-                var resp = _mapper.Map<Persona>(modelDto);
+                var resp = _mapper.Map<Usuario>(modelDto);
                 response.Data = await _Domain.UpdateAsync(resp);
                 if (response.Data)
                 {
