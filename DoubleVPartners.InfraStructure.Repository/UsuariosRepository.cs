@@ -84,5 +84,18 @@ namespace DoubleVPartners.InfraStructure.Repository
                 return result;
             }
         }
+
+        public async Task<Usuario> Autenticar(string NombreUsuario)
+        {            
+            using (var connection = _connectionFactory.GetConnection)
+            {
+                var query = "UspgetUsuariosPorNombreUsuario";
+                var parameters = new DynamicParameters();
+                parameters.Add("@NombreUsuario", NombreUsuario);
+
+                var result = await connection.QuerySingleAsync<Usuario>(query, param: parameters, commandType: CommandType.StoredProcedure);
+                return result;
+            }
+        }
     }
 }

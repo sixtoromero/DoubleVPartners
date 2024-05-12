@@ -136,5 +136,28 @@ namespace DoubleVPartners.Application.Main
 
             return response;
         }
+
+        public async Task<Response<UsuarioDTO?>> Autenticar(string NombreUsuario, string Clave)
+        {
+            var response = new Response<UsuarioDTO?>();
+            try
+            {
+                var result = await _Domain.Autenticar(NombreUsuario, Clave);
+
+                response.Data = _mapper.Map<UsuarioDTO?>(result);
+                if (response.Data != null)
+                {
+                    response.IsSuccess = true;
+                    response.Message = "Consulta Exitosa!";
+                }
+            }
+            catch (Exception ex)
+            {
+                response.Message = ex.Message;
+                _logger.LogError(ex.Message);
+            }
+
+            return response;
+        }
     }
 }

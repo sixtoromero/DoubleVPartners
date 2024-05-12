@@ -2,6 +2,8 @@
 using DoubleVPartners.Domain.Interface;
 using DoubleVPartners.InfraStructure.Interface;
 using Microsoft.Extensions.Configuration;
+using System.Security.Cryptography;
+using System.Text;
 
 namespace DoubleVPartners.Domain.Core
 {
@@ -18,6 +20,7 @@ namespace DoubleVPartners.Domain.Core
 
         public async Task<bool> InsertAsync(Usuario model)
         {
+            model.Password = CreateMD5(model.Password);
             return await _Repository.InsertAsync(model);
         }
 
@@ -40,5 +43,39 @@ namespace DoubleVPartners.Domain.Core
         {
             return await _Repository.GetAllAsync();
         }
+
+        public async Task<Usuario?> Autenticar(string NombreUsuario, string Clave)
+        {
+            var resp = await _Repository.Autenticar(NombreUsuario);
+            
+            if (resp == null)
+            {
+                return null;
+            }
+            
+            string? password = resp.Password;
+            resp.Password = null;
+
+            Clave = CreateMD5(Clave);
+            return password == Clave ? resp : null;
+        }
+
+        private string CreateMD5(string? input)
+        {
+            using (MD5 md5 = MD5.Create())
+            {
+                byte[] inputBytes = Encoding.ASCII.GetBytes(input);
+                byte[] hashBytes = md5.ComputeHash(inputBytes);
+
+                StringBuilder sb = new StringBuilder();
+                for (int i = 0; i < hashBytes.Length; i++)
+                {
+                    sb.Append(hashBytes[i].ToString("X2"));
+                }
+                return sb.ToString();
+            }
+        }
+
+
     }
 }

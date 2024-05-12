@@ -162,5 +162,32 @@ namespace DoubleVPartners.Services.WebAPIRest.Controllers
                 return BadRequest(response);
             }
         }
+
+        [HttpGet("Autenticar")]
+        public async Task<IActionResult> Autenticar(string NombreUsuario, string Clave)
+        {
+            Response<UsuarioDTO?> response = new Response<UsuarioDTO?>();
+
+            try
+            {
+                response = await _Application.Autenticar(NombreUsuario, Clave);
+                if (response.IsSuccess)
+                {
+                    return Ok(response);
+                }
+                else
+                {
+                    return BadRequest(response);
+                }
+            }
+            catch (Exception ex)
+            {
+                response.Data = null;
+                response.IsSuccess = false;
+                response.Message = ex.Message;
+
+                return BadRequest(response);
+            }
+        }
     }
 }
