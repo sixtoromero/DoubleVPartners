@@ -30,4 +30,8 @@
     <ProjectReference Include="..\DoubleVPartners.Transversal.Mapper\DoubleVPartners.Transversal.Mapper.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="wwwroot\img\" />
+  </ItemGroup>
+
 </Project>
