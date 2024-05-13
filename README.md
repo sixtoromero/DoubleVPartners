@@ -3,6 +3,10 @@
 
 ![alt text](https://github.com/sixtoromero/DoubleVPartners/blob/main/DoubleVPartners.Services.WebAPIRest/wwwroot/img/backend-main.png "Arrquitectura DDD")
 
+# Video
+
+[![Nombre del Video](https://img.youtube.com/vi/l90rYV8YIXA/0.jpg)](https://youtu.be/l90rYV8YIXA)
+
 ## Descripción del Proyecto
 Es una solución desarrollada en .NET 6 que implementa la arquitectura de diseño dirigido por el dominio (DDD). Este enfoque se centra en la complejidad del dominio/negocio para facilitar la creación de soluciones de software complejas pero escalables.
 
