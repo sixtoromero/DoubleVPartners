@@ -31,6 +31,7 @@ Para gestionar el cambio de la base de datos deben dirigirse al appsettings.json
 "ConnectionStrings": {
   "DoubleVPartnersConnection": "Data Source=DESKTOP-IEOP1NV\\SQLEXPRESS; Initial Catalog=DoubleVPartnersDB; Trusted_Connection=True; Min Pool Size=0; Max Pool Size=500; Pooling=true; Encrypt=False; TrustServerCertificate=True; MultipleActiveResultSets=True; Persist Security Info=True;"
 }
+```
 
 # Base de datos
 
