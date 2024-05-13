@@ -1,5 +1,5 @@
 USE [DoubleVPartnersDB]
-GO
+
 CREATE TABLE [dbo].[Personas](
 	[Identificador] [int] IDENTITY(1,1) NOT NULL,
 	[Nombres] [nvarchar](150) NOT NULL,
@@ -14,7 +14,7 @@ CREATE TABLE [dbo].[Personas](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Usuarios]    Script Date: 12/05/2024 6:33:48 p. m. ******/
+/****** Object:  Table [dbo].[Usuarios]    Script Date: 13/05/2024 6:48:03 p. m. ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -30,7 +30,7 @@ CREATE TABLE [dbo].[Usuarios](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  StoredProcedure [dbo].[uspDelPersonas]    Script Date: 12/05/2024 6:33:48 p. m. ******/
+/****** Object:  StoredProcedure [dbo].[uspDelPersonas]    Script Date: 13/05/2024 6:48:03 p. m. ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -51,7 +51,7 @@ BEGIN
 	END CATCH;
 END
 GO
-/****** Object:  StoredProcedure [dbo].[uspDelUsuarios]    Script Date: 12/05/2024 6:33:48 p. m. ******/
+/****** Object:  StoredProcedure [dbo].[uspDelUsuarios]    Script Date: 13/05/2024 6:48:03 p. m. ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -72,7 +72,7 @@ BEGIN
 	END CATCH;
 END
 GO
-/****** Object:  StoredProcedure [dbo].[UspgetPersonas]    Script Date: 12/05/2024 6:33:48 p. m. ******/
+/****** Object:  StoredProcedure [dbo].[UspgetPersonas]    Script Date: 13/05/2024 6:48:03 p. m. ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -95,7 +95,7 @@ BEGIN
 	END CATCH;
 END
 GO
-/****** Object:  StoredProcedure [dbo].[UspgetPersonasByID]    Script Date: 12/05/2024 6:33:48 p. m. ******/
+/****** Object:  StoredProcedure [dbo].[UspgetPersonasByID]    Script Date: 13/05/2024 6:48:03 p. m. ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -120,7 +120,7 @@ BEGIN
 	END CATCH;
 END
 GO
-/****** Object:  StoredProcedure [dbo].[UspgetUsuarios]    Script Date: 12/05/2024 6:33:48 p. m. ******/
+/****** Object:  StoredProcedure [dbo].[UspgetUsuarios]    Script Date: 13/05/2024 6:48:03 p. m. ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -139,7 +139,7 @@ BEGIN
 	END CATCH;
 END
 GO
-/****** Object:  StoredProcedure [dbo].[UspgetUsuariosByID]    Script Date: 12/05/2024 6:33:48 p. m. ******/
+/****** Object:  StoredProcedure [dbo].[UspgetUsuariosByID]    Script Date: 13/05/2024 6:48:03 p. m. ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -161,7 +161,7 @@ BEGIN
 END
 
 GO
-/****** Object:  StoredProcedure [dbo].[UspgetUsuariosPorNombreUsuario]    Script Date: 12/05/2024 6:33:48 p. m. ******/
+/****** Object:  StoredProcedure [dbo].[UspgetUsuariosPorNombreUsuario]    Script Date: 13/05/2024 6:48:03 p. m. ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -184,7 +184,7 @@ BEGIN
 END
 
 GO
-/****** Object:  StoredProcedure [dbo].[uspPersonasInsert]    Script Date: 12/05/2024 6:33:48 p. m. ******/
+/****** Object:  StoredProcedure [dbo].[uspPersonasInsert]    Script Date: 13/05/2024 6:48:03 p. m. ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -221,7 +221,7 @@ BEGIN
 	END CATCH;
 END
 GO
-/****** Object:  StoredProcedure [dbo].[uspPersonasUpdate]    Script Date: 12/05/2024 6:33:48 p. m. ******/
+/****** Object:  StoredProcedure [dbo].[uspPersonasUpdate]    Script Date: 13/05/2024 6:48:03 p. m. ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -251,7 +251,7 @@ BEGIN
 	END CATCH;
 END
 GO
-/****** Object:  StoredProcedure [dbo].[uspUsuariosInsert]    Script Date: 12/05/2024 6:33:48 p. m. ******/
+/****** Object:  StoredProcedure [dbo].[uspUsuariosInsert]    Script Date: 13/05/2024 6:48:03 p. m. ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -279,7 +279,7 @@ BEGIN
 	END CATCH;
 END
 GO
-/****** Object:  StoredProcedure [dbo].[uspUsuariosUpdate]    Script Date: 12/05/2024 6:33:48 p. m. ******/
+/****** Object:  StoredProcedure [dbo].[uspUsuariosUpdate]    Script Date: 13/05/2024 6:48:03 p. m. ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -300,4 +300,8 @@ BEGIN
 		SELECT ERROR_MESSAGE();
 	END CATCH;
 END
+GO
+USE [master]
+GO
+ALTER DATABASE [DoubleVPartnersDB] SET  READ_WRITE 
 GO
