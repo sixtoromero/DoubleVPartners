@@ -27,7 +27,7 @@ Contiene código que es común a todas las capas, como configuraciones y utilida
 El archivo appsettings.json contiene configuraciones esenciales para el funcionamiento del proyecto, incluyendo cadenas de conexión a bases de datos y configuraciones específicas para CORS y otros parámetros relevantes.
 
 Para gestionar el cambio de la base de datos deben dirigirse al appsettings.json en la capa de presentación en el proyecto DoubleVPartners.Services.WebAPIRest
-```bash
+```json
 "ConnectionStrings": {
   "DoubleVPartnersConnection": "Data Source=DESKTOP-IEOP1NV\\SQLEXPRESS; Initial Catalog=DoubleVPartnersDB; Trusted_Connection=True; Min Pool Size=0; Max Pool Size=500; Pooling=true; Encrypt=False; TrustServerCertificate=True; MultipleActiveResultSets=True; Persist Security Info=True;"
 }
