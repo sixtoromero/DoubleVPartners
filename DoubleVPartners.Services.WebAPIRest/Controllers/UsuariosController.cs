@@ -144,7 +144,7 @@ namespace DoubleVPartners.Services.WebAPIRest.Controllers
             }
         }
 
-        [HttpPost("DelAsync")]
+        [HttpDelete("DelAsync")]
         public async Task<IActionResult> DelAsync(int Id)
         {
             Response<bool> response = new Response<bool>();
@@ -177,7 +177,7 @@ namespace DoubleVPartners.Services.WebAPIRest.Controllers
 
             try
             {
-                response = await _Application.Autenticar(request.NombreUsuario, request.Clave);
+                response = await _Application.Autenticar(request.NombreUsuario, request.Password);
                 if (response.IsSuccess)
                 {                    
                     response.Data.Token = General.BuildToken(response.Data, _appSettings);
@@ -197,5 +197,60 @@ namespace DoubleVPartners.Services.WebAPIRest.Controllers
                 return BadRequest(response);
             }
         }
+
+        [HttpPost("validate-token")]
+        public IActionResult ValidateToken(ValidateTokenDTO model)
+        {
+            Response<bool> response = new Response<bool>();
+
+            if (string.IsNullOrEmpty(model.Token))
+            {
+                response.Data = false;
+                response.IsSuccess = false;
+                response.Message = "Token no proporcionado";
+
+                return BadRequest(response);
+            }
+
+            try
+            {
+                var tokenHandler = new JwtSecurityTokenHandler();
+                var validationParameters = new TokenValidationParameters
+                {
+                    ValidateIssuerSigningKey = true,
+                    IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_appSettings.Secret)),
+                    ValidateIssuer = false,
+                    ValidateAudience = false,
+                    ValidateLifetime = true,
+                    ClockSkew = TimeSpan.Zero
+                };
+
+                var principal = tokenHandler.ValidateToken(model.Token, validationParameters, out SecurityToken validatedToken);
+                // Si el token ha pasado la validación, devolver una respuesta positiva
+
+                response.Data = true;
+                response.IsSuccess = true;
+                response.Message = "Token es válido";
+
+                return Ok(response);
+            }
+            catch (SecurityTokenExpiredException)
+            {
+                response.Data = false;
+                response.IsSuccess = false;
+                response.Message = "Token ha expirado.";
+
+                return Unauthorized(response);
+            }
+            catch (Exception ex)
+            {
+                response.Data = false;
+                response.IsSuccess = false;
+                response.Message = $"Token inválido: {ex.Message}";
+
+                return BadRequest(response);
+            }
+        }
+
     }
 }

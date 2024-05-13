@@ -139,7 +139,7 @@ namespace DoubleVPartners.Services.WebAPIRest.Controllers
             }
         }
 
-        [HttpPost("DelAsync")]
+        [HttpDelete("DelAsync")]
         public async Task<IActionResult> DelAsync(int Id)
         {
             Response<bool> response = new Response<bool>();

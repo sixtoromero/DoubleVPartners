@@ -15,31 +15,37 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentatio
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Transversal", "Transversal", "{9F098C29-8BA7-483C-9142-B63839C64E9A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DoubleVPartners.Application.DTO", "DoubleVPartners.Application.DTO\DoubleVPartners.Application.DTO.csproj", "{DFE635E6-0569-452C-BCE3-BBAB02B9C14D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DoubleVPartners.Application.DTO", "DoubleVPartners.Application.DTO\DoubleVPartners.Application.DTO.csproj", "{DFE635E6-0569-452C-BCE3-BBAB02B9C14D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DoubleVPartners.Application.Interface", "DoubleVPartners.Application.Interface\DoubleVPartners.Application.Interface.csproj", "{C9371BAC-4A10-4ECE-AB06-237C18ED2561}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DoubleVPartners.Application.Interface", "DoubleVPartners.Application.Interface\DoubleVPartners.Application.Interface.csproj", "{C9371BAC-4A10-4ECE-AB06-237C18ED2561}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DoubleVPartners.Application.Main", "DoubleVPartners.Application.Main\DoubleVPartners.Application.Main.csproj", "{E79B3BC0-3653-408B-8600-F7AC2C2C1EFC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DoubleVPartners.Application.Main", "DoubleVPartners.Application.Main\DoubleVPartners.Application.Main.csproj", "{E79B3BC0-3653-408B-8600-F7AC2C2C1EFC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DoubleVPartners.Domain.Core", "DoubleVPartners.Domain.Core\DoubleVPartners.Domain.Core.csproj", "{12AA9C0F-2CB9-43DA-875A-630F7DF7ECCD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DoubleVPartners.Domain.Core", "DoubleVPartners.Domain.Core\DoubleVPartners.Domain.Core.csproj", "{12AA9C0F-2CB9-43DA-875A-630F7DF7ECCD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DoubleVPartners.Domain.Entity", "DoubleVPartners.Domain.Entity\DoubleVPartners.Domain.Entity.csproj", "{4EB3773A-0159-448E-8581-458E49D11150}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DoubleVPartners.Domain.Entity", "DoubleVPartners.Domain.Entity\DoubleVPartners.Domain.Entity.csproj", "{4EB3773A-0159-448E-8581-458E49D11150}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DoubleVPartners.Domain.Interface", "DoubleVPartners.Domain.Interface\DoubleVPartners.Domain.Interface.csproj", "{7A120940-60C7-4B23-BAB8-9824651E7ADE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DoubleVPartners.Domain.Interface", "DoubleVPartners.Domain.Interface\DoubleVPartners.Domain.Interface.csproj", "{7A120940-60C7-4B23-BAB8-9824651E7ADE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DoubleVPartners.InfraStructure.Data", "DoubleVPartners.InfraStructure.Data\DoubleVPartners.InfraStructure.Data.csproj", "{9328E618-44B2-432E-B7D5-8AEC389EB924}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DoubleVPartners.InfraStructure.Data", "DoubleVPartners.InfraStructure.Data\DoubleVPartners.InfraStructure.Data.csproj", "{9328E618-44B2-432E-B7D5-8AEC389EB924}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DoubleVPartners.InfraStructure.Interface", "DoubleVPartners.InfraStructure.Interface\DoubleVPartners.InfraStructure.Interface.csproj", "{0B8926CA-63A5-419D-A558-F03D4A3C760B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DoubleVPartners.InfraStructure.Interface", "DoubleVPartners.InfraStructure.Interface\DoubleVPartners.InfraStructure.Interface.csproj", "{0B8926CA-63A5-419D-A558-F03D4A3C760B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DoubleVPartners.InfraStructure.Repository", "DoubleVPartners.InfraStructure.Repository\DoubleVPartners.InfraStructure.Repository.csproj", "{90133F0F-09B0-4B77-8C98-0987A3828DDA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DoubleVPartners.InfraStructure.Repository", "DoubleVPartners.InfraStructure.Repository\DoubleVPartners.InfraStructure.Repository.csproj", "{90133F0F-09B0-4B77-8C98-0987A3828DDA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DoubleVPartners.Services.WebAPIRest", "DoubleVPartners.Services.WebAPIRest\DoubleVPartners.Services.WebAPIRest.csproj", "{1F1578BF-A4A2-4048-8548-F032FC3E9045}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DoubleVPartners.Services.WebAPIRest", "DoubleVPartners.Services.WebAPIRest\DoubleVPartners.Services.WebAPIRest.csproj", "{1F1578BF-A4A2-4048-8548-F032FC3E9045}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DoubleVPartners.Transversal.Common", "DoubleVPartners.Transversal.Common\DoubleVPartners.Transversal.Common.csproj", "{79FF2587-D05B-4822-B598-DBCEDBA591C2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DoubleVPartners.Transversal.Common", "DoubleVPartners.Transversal.Common\DoubleVPartners.Transversal.Common.csproj", "{79FF2587-D05B-4822-B598-DBCEDBA591C2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DoubleVPartners.Transversal.Logging", "DoubleVPartners.Transversal.Logging\DoubleVPartners.Transversal.Logging.csproj", "{81429C1A-7630-439C-8DAD-B00FCF75D7CA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DoubleVPartners.Transversal.Logging", "DoubleVPartners.Transversal.Logging\DoubleVPartners.Transversal.Logging.csproj", "{81429C1A-7630-439C-8DAD-B00FCF75D7CA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DoubleVPartners.Transversal.Mapper", "DoubleVPartners.Transversal.Mapper\DoubleVPartners.Transversal.Mapper.csproj", "{DB411512-2B77-4732-9A6A-9A117D90B6B0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DoubleVPartners.Transversal.Mapper", "DoubleVPartners.Transversal.Mapper\DoubleVPartners.Transversal.Mapper.csproj", "{DB411512-2B77-4732-9A6A-9A117D90B6B0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Base_de_Datos", "Base_de_Datos", "{76B61B47-514E-45AE-A8F4-627DB42125A2}"
+	ProjectSection(SolutionItems) = preProject
+		Base_de_Datos\DoubleVPartners.bak = Base_de_Datos\DoubleVPartners.bak
+		Base_de_Datos\DoubleVPartnersDB.sql = Base_de_Datos\DoubleVPartnersDB.sql
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
