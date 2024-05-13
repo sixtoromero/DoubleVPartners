@@ -1,4 +1,5 @@
 # DoubleVPartners Prueba técnica
+**Nota importante:** Leer hasta el final donde está la descripción para la base de datos.
 
 ![alt text](https://github.com/sixtoromero/DoubleVPartners/blob/main/DoubleVPartners.Services.WebAPIRest/wwwroot/img/backend-main.png "Arrquitectura DDD")
 
