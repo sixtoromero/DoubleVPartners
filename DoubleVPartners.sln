@@ -43,6 +43,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DoubleVPartners.Transversal
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Base_de_Datos", "Base_de_Datos", "{76B61B47-514E-45AE-A8F4-627DB42125A2}"
 	ProjectSection(SolutionItems) = preProject
+		Base_de_Datos\BackupDoublePartners.bak = Base_de_Datos\BackupDoublePartners.bak
 		Base_de_Datos\DoubleVPartnersDB.sql = Base_de_Datos\DoubleVPartnersDB.sql
 	EndProjectSection
 EndProject
